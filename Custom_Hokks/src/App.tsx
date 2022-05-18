@@ -13,18 +13,22 @@ function App() {
   }
  const [text,setText]=useState("");
  const [data,setdata]=useState<User[]>([])
+ const [loading,setLoading]=useState(false);
+ const [err,setErr]=useState(false)
   return (
     <div className="App">
       {toShow? (<h1 style={{color:'red'}}>Hello</h1>) : (<h1>Waiting for timer..</h1>)}
       <br/><br/><hr/><br/>
       <input onChange={(e)=>setText(e.target.value)}></input>
       <button onClick={()=>{
+        setLoading(true)
         axios.get(URL,{
           params:{
             per_page:5,
             q:text
           }
         }).then(({data})=>{
+          setLoading(false)
           setdata(data.items)
         })
       }}>Search</button>
