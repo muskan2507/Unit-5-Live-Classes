@@ -1,12 +1,14 @@
 import React, { memo, useState } from 'react'
 import { todoType } from './Todos'
-
-const TodoItem = (props:todoType) => {
-    const [status,setstaus]=useState<boolean>(props.status)
+type TodoItemType={
+handleToggle:(S:number)=>void
+}
+const TodoItem = (props:todoType & TodoItemType) => {
+  
   return (
     <div>
-        {props.title}-{status?"Done":"Not done"}
-        <button onClick={()=>setstaus(!status)}>Toggle</button>
+        {props.title}-{props.status?"Done":"Not done"}
+        <button onClick={()=>props.handleToggle(props.id)}>Toggle</button>
     </div>
   )
 }

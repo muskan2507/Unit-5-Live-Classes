@@ -9,7 +9,9 @@ export type todoType={
 const Todos = () => {
   const [value,setValue]=useState("");
   const [data,setData]=useState<todoType[]>([])
-  
+  const handleToggle=(id:number)=>{
+
+  }
   return (
     <div>
       <input type="text" onChange={(e)=>setValue(e.target.value)}/>
@@ -23,7 +25,7 @@ const Todos = () => {
       }}>Add Todo</button>
       {data.map(e=>{
     return (
-        <MemoTodo key={e.id} {...e}/>
+        <MemoTodo key={e.id} {...e}/ handleToggle={handleToggle}>
     )
       })}
     </div>
