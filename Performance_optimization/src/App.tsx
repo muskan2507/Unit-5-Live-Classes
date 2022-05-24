@@ -8,10 +8,12 @@ function App() {
   
   return (
     <div className="App">
-    {/* <Fib/>
+    <Fib/>
+    <br /><hr /><br />
     <Todos/>
-   <Counter/> */}
-   <h1>hello</h1>
+    <br /><hr /><br />
+   <Counter/>
+   
     </div>
   );
 }

@@ -14,9 +14,10 @@ const TodoItem = (props:todoType & TodoItemType) => {
 }
 
 export default TodoItem
-export const MemoTodo=memo(TodoItem,function eq(prev,curr){
-    if(prev.id==curr.id){
-        return true;
-    }
-    return false;
-})
+export const MemoTodo=memo(TodoItem)
+  // function eq(prev,curr){
+//     if(prev.id==curr.id){
+//         return true;
+//     }
+//     return false;
+// })
