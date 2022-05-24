@@ -8,9 +8,10 @@ function App() {
   
   return (
     <div className="App">
-    <Fib/>
+    {/* <Fib/>
     <Todos/>
-   <Counter/>
+   <Counter/> */}
+   <h1>hello</h1>
     </div>
   );
 }
