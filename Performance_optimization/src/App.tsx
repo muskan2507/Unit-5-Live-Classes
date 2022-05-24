@@ -1,8 +1,8 @@
-
 import { useMemo, useState } from 'react';
 import './App.css';
 import Fib from './Components/Fib';
 import Todos from './Components/Todos';
+import { Counter } from './Components/useReducer';
 
 function App() {
   
@@ -10,6 +10,7 @@ function App() {
     <div className="App">
     <Fib/>
     <Todos/>
+   <Counter/>
     </div>
   );
 }

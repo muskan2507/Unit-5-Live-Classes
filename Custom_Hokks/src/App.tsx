@@ -1,3 +1,4 @@
+import { useDebouncedCallback } from '@react-hookz/web';
 import axios from 'axios';
 // import { useDebouncedCallback } from '@react-hookz/web';
 import { useState } from 'react';
@@ -17,12 +18,16 @@ function App() {
     per_page:5,
     q:text || "masai-codes"
   })
-   
+   const handleDebounce=useDebouncedCallback(
+     (e)=>setText(e.target.value),
+     [],
+     1000,0
+   )
   return (
     <div className="App">
       {toShow? (<h1 style={{color:'red'}}>Hello</h1>) : (<h1>Waiting for timer..</h1>)}
       <br/><br/><hr/><br/>
-      <input onChange={(e)=>setText(e.target.value)}></input>
+      <input onChange={handleDebounce}></input>
       
     { loading? (<div>...Loading</div>) : err? (<div>Something Went Wrong</div>): (data.map(User=>{
       return (
