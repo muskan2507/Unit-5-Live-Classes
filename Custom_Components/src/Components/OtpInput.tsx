@@ -13,16 +13,14 @@ const OtpInput = ({ inputNumber,onChange}: otpInpuType) => {
       {new Array(inputNumber).fill(1).map((e, index) => (
         <input
         onKeyUp={(e)=>{
-            // if(index>=0 && index<inputRef.current.length){
-                if(e.code==="Backspace"){
-                    inputRef.current[index-1].focus()
-                    inputRef.current[index-1].select()
-                }
-                else{
-                    inputRef.current[index+1].focus()
-                }
-            // }
-           onChange(otp)
+          if(e.code==="Backspace" && index>0){
+            inputRef.current[index-1].focus();
+            inputRef.current[index-1].select();
+        }
+        else if(index<inputNumber-1 && e.code!=="Backspace"){
+            inputRef.current[index+1].focus();
+        }
+        onChange(otp)
         }}
         onChange={(e)=>{
             setOtp(otp+e.target.value)

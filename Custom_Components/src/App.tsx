@@ -2,6 +2,7 @@
 import './App.css';
 import Accordian from './Components/Accordian';
 import OtpInput from './Components/OtpInput';
+import Tabs from './Components/Tabs';
 const data = [
   {
     desc:
@@ -29,15 +30,26 @@ const data = [
       title: "This is panel header 5",
   },
 ];
+const data1 = [
+  {title:"One",desc:"hi one!"},
+  {title:"Two",desc:" hello two!"},
+  {title:"Three",desc:"sit three!"},
+  {title:"Four",desc:"bye four!"},
+]
 function App() {
   const handleChange=(otp:string)=>{
     console.log(otp)
   }
   return (
     <div className="App">
-    <OtpInput inputNumber={4} onChange={handleChange} />
+      {/* -----------------------------------------OTP Box---------------------------------- */}
+    <OtpInput inputNumber={5} onChange={handleChange} />
     <br /><hr /><br />
+    {/* ---------------------------------------------Accordian-------------------------------- */}
     <Accordian data={data}/>
+    <br /><hr /><br />
+    {/* --------------------------------------------Tabs----------------------------------------- */}
+    <Tabs data={data1}/>
     </div>
   );
 }
