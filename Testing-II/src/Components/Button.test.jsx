@@ -1,6 +1,7 @@
 import { fireEvent, render, screen } from "@testing-library/react"
 import App from "../App"
 import Button from "./Button"
+import renderer from "react-test-renderer"
 
 describe("Button Tests",function(){
     it("should have button in dom",function(){
@@ -32,5 +33,9 @@ describe("Button Tests",function(){
         const btn=screen.getByText("Click me")
         fireEvent.click(btn)
         expect(mockfn).toBeCalled()
+    })
+    it("should match snapshot",function(){
+        const tree=renderer.create(<Button>Add Counter</Button>).toTree()
+        expect(tree).toMatchSnapshot()
     })
 })
