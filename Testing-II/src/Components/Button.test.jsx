@@ -25,7 +25,7 @@ describe("Button Tests",function(){
         expect(h3).toHaveTextContent("light");
         let themeButton=screen.getByText("Change theme")
         fireEvent.click(themeButton)
-        expect(h3).toHaveTextContent("dark")
+        expect(h3).toHaveTextContent("dark")    
     })
     it("should call given function",function(){
         const mockfn=jest.fn();
