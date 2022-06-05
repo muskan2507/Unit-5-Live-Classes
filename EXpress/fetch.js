@@ -1,0 +1,9 @@
+fetch("http://localhost:8080/products",{
+    method:"POST",
+    body:JSON.stringify({a:1}),
+    header:{"content-type":"application/json"}
+}).then(({data})=>{
+    console.log(data)
+}).catch((err)=>{
+    console.log(err)
+})
