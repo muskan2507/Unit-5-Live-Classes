@@ -6,7 +6,8 @@ app.use(express.json())
 
 app.get("/",(req,res)=>{
     res.write("hello");
-    res.end("world")
+    res.end("world");
+    
 })
 app.get("/products",(req,res)=>{
    

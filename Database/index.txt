@@ -1,0 +1,610 @@
+
+princ@LAPTOP-RB1C6BSC MINGW64 ~
+$ show dbs
+bash: show: command not found
+
+princ@LAPTOP-RB1C6BSC MINGW64 ~
+$ mongosh
+Current Mongosh Log ID: 62a02962a51ce192c213c445
+Connecting to:          mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.5.0
+Using MongoDB:          5.0.9
+Using Mongosh:          1.5.0
+
+For mongosh info see: https://docs.mongodb.com/mongodb-shell/
+
+------
+   The server generated these startup warnings when booting
+   2022-06-07T12:58:32.947+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+------
+
+------
+   Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+   metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+   The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+   and anyone you share the URL with. MongoDB may use this information to make product
+   improvements and to suggest MongoDB products and deployment options to you.
+
+   To enable free monitoring, run the following command: db.enableFreeMonitoring()
+   To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+------
+
+Warning: Found ~/.mongorc.js, but not ~/.mongoshrc.js. ~/.mongorc.js will not be loaded.
+  You may want to copy or rename ~/.mongorc.js to ~/.mongoshrc.js.
+test> show dbs
+admin   40.00 KiB
+config  60.00 KiB
+local   40.00 KiB
+test> show collections
+
+test> show bds
+MongoshInvalidInputError: [COMMON-10001] 'bds' is not a valid argument for "show".
+test> show dbs
+admin    40.00 KiB
+config  108.00 KiB
+local    40.00 KiB
+test> use employerInfo
+switched to db employerInfo
+employerInfo> show dbs
+admin    40.00 KiB
+config  108.00 KiB
+local    40.00 KiB
+employerInfo> show collections
+
+employerInfo> db.createCollection("users")
+{ ok: 1 }
+employerInfo> db.createCollection("manager")
+Uncaught:
+SyntaxError: Unexpected character ':0)
+
+> 1 | reateCollection("manager")
+    | ^
+  2 |
+
+employerInfo>
+princ@LAPTOP-RB1C6BSC MINGW64 ~
+$ mongosh
+Current Mongosh Log ID: 62a036d75614f1cac1ac667a
+Connecting to:          mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.5.0
+Using MongoDB:          5.0.9
+Using Mongosh:          1.5.0
+
+For mongosh info see: https://docs.mongodb.com/mongodb-shell/
+
+------
+   The server generated these startup warnings when booting
+   2022-06-07T12:58:32.947+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+------
+
+------
+   Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+   metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+   The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+   and anyone you share the URL with. MongoDB may use this information to make product
+   improvements and to suggest MongoDB products and deployment options to you.
+
+   To enable free monitoring, run the following command: db.enableFreeMonitoring()
+   To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+------
+
+Warning: Found ~/.mongorc.js, but not ~/.mongoshrc.js. ~/.mongorc.js will not be loaded.
+  You may want to copy or rename ~/.mongorc.js to ~/.mongoshrc.js.
+test> show dbs
+admin          40.00 KiB
+config        108.00 KiB
+employerInfo    8.00 KiB
+local          40.00 KiB
+test> use employerInfo
+switched to db emloyerInfo
+emloyerInfo> show collections
+
+emloyerInfo> db.createCollection("users")
+{ ok: 1 }
+emloyerInfo> show collections
+users
+emloyerInfo> db.user.insertOne({
+    "id": 1,
+    "name": "Leanne Graham",
+    "username": "Bret",
+    "email": "Sincere@april.biz",
+    "address": {
+      "street": "Kulas Light",
+      "suite": "Apt. 556",
+      "city": "Gwenborough",
+      "zipcode": "92998-3874",
+      "geo": {
+        "lat": "-37.3159",
+        "lng": "81.1496"
+      }
+    },
+    "phone": "1-770-736-8031 x56442",
+    "website": "hildegard.org",
+    "company": {
+      "name": "Romaguera-Crona",
+      "catchPhrase": "Multi-layered client-server neural-net",
+      "bs": "harness real-time e-markets"
+    }
+Uncaught:
+SyntaxError: Unexpected character ':19)
+
+> 1 | db.user.insertOne(){
+    |                    ^
+  2 |
+
+  },emloyerInfo> Uncaught:
+SyntaxError: Missing semicolon. (1:8)
+
+> 1 |     "id": 1,
+    |         ^
+  2 |
+
+emloyerInfo> Uncaught:
+SyntaxError: Missing semicolon. (1:10)
+
+> 1 |     "name": "Leanne Graham",
+    |           ^
+  2 |
+
+emloyerInfo> Uncaught:
+SyntaxError: Missing semicolon. (1:14)
+
+> 1 |     "username": "Bret",
+    |               ^
+  2 |
+
+emloyerInfo> Uncaught:
+SyntaxError: Missing semicolon. (1:11)
+
+> 1 |     "email": "Sincere@april.biz",
+    |            ^
+  2 |
+
+emloyerInfo> Uncaught:
+SyntaxError: Missing semicolon. (1:13)
+
+> 1 |     "address": {
+    |              ^
+  2 |
+
+emloyerInfo> Uncaught:
+SyntaxError: Missing semicolon. (1:14)
+
+> 1 |       "street": "Kulas Light",
+    |               ^
+  2 |
+
+emloyerInfo> Uncaught:
+SyntaxError: Missing semicolon. (1:13)
+
+> 1 |       "suite": "Apt. 556",
+    |              ^
+  2 |
+
+emloyerInfo> Uncaught:
+SyntaxError: Missing semicolon. (1:12)
+
+> 1 |       "city": "Gwenborough",
+    |             ^
+  2 |
+
+emloyerInfo> Uncaught:
+SyntaxError: Missing semicolon. (1:15)
+
+> 1 |       "zipcode": "92998-3874",
+    |                ^
+  2 |
+
+emloyerInfo> Uncaught:
+SyntaxError: Missing semicolon. (1:11)
+
+> 1 |       "geo": {
+    |            ^
+  2 |
+
+emloyerInfo> Uncaught:
+SyntaxError: Missing semicolon. (1:13)
+
+> 1 |         "lat": "-37.3159",
+    |              ^
+  2 |
+
+emloyerInfo> Uncaught:
+SyntaxError: Missing semicolon. (1:13)
+
+> 1 |         "lng": "81.1496"
+    |              ^
+  2 |
+
+emloyerInfo> Uncaught:
+SyntaxError: Unexpected token (1:6)
+
+> 1 |       }
+    |       ^
+  2 |
+
+emloyerInfo> Uncaught:
+SyntaxError: Unexpected token (1:4)
+
+> 1 |     },
+    |     ^
+  2 |
+
+emloyerInfo> Uncaught:
+SyntaxError: Missing semicolon. (1:11)
+
+> 1 |     "phone": "1-770-736-8031 x56442",
+    |            ^
+  2 |
+
+emloyerInfo> Uncaught:
+SyntaxError: Missing semicolon. (1:13)
+
+> 1 |     "website": "hildegard.org",
+    |              ^
+  2 |
+
+emloyerInfo> Uncaught:
+SyntaxError: Missing semicolon. (1:13)
+
+> 1 |     "company": {
+    |              ^
+  2 |
+
+emloyerInfo> Uncaught:
+SyntaxError: Missing semicolon. (1:12)
+
+> 1 |       "name": "Romaguera-Crona",
+    |             ^
+  2 |
+
+emloyerInfo> Uncaught:
+SyntaxError: Missing semicolon. (1:19)
+
+> 1 |       "catchPhrase": "Multi-layered client-server neural-net",
+    |                    ^
+  2 |
+
+emloyerInfo> Uncaught:
+SyntaxError: Missing semicolon. (1:10)
+
+> 1 |       "bs": "harness real-time e-markets"
+    |           ^
+  2 |
+
+emloyerInfo> Uncaught:
+SyntaxError: Unexpected token (1:4)
+
+> 1 |     }
+    |     ^
+  2 |
+
+emloyerInfo> db.users.insertOne({
+    "id": 1,
+    "name": "Leanne Graham",
+    "username": "Bret",
+    "email": "Sincere@april.biz",
+    "address": {
+Uncaught:
+SyntaxError: Unexpected token (1:2)
+
+> 1 |   },db.users.insertOne(){
+    |   ^
+  2 |
+
+emloyerInfo>       "street": "Kulas Light",
+      "suite": "Apt. 556",
+      "city": "Gwenborough",
+      "zipcode": "92998-3874",
+      "geo": {
+        "lat": "-37.3159",
+Uncaught:
+SyntaxError: Missing semicolon. (1:8)
+
+> 1 |     "id": 1,
+    |         ^
+  2 |
+
+emloyerInfo>         "lng": "81.1496"
+      }
+    },
+    "phone": "1-770-736-8031 x56442",
+Uncaught:
+SyntaxError: Missing semicolon. (1:10)
+
+> 1 |     "name": "Leanne Graham",
+    |           ^
+  2 |
+
+emloyerInfo>     "website": "hildegard.org",
+    "company": {
+      "name": "Romaguera-Crona",
+Uncaught:
+SyntaxError: Missing semicolon. (1:14)
+
+> 1 |     "username": "Bret",
+    |               ^
+  2 |
+
+emloyerInfo>       "catchPhrase": "Multi-layered client-server neural-net",
+      "bs": "harness real-time e-markets"
+    }
+Uncaught:
+SyntaxError: Missing semicolon. (1:11)
+
+> 1 |     "email": "Sincere@april.biz",
+    |            ^
+  2 |
+
+emloyerInfo> Uncaught:
+SyntaxError: Missing semicolon. (1:13)
+
+> 1 |     "address": {
+    |              ^
+  2 |
+
+emloyerInfo> Uncaught:
+SyntaxError: Missing semicolon. (1:14)
+
+> 1 |       "street": "Kulas Light",
+    |               ^
+  2 |
+
+emloyerInfo> Uncaught:
+SyntaxError: Missing semicolon. (1:13)
+
+> 1 |       "suite": "Apt. 556",
+    |              ^
+  2 |
+
+emloyerInfo>   },Uncaught:
+SyntaxError: Missing semicolon. (1:12)
+
+> 1 |       "city": "Gwenborough",
+    |             ^
+  2 |
+
+emloyerInfo> Uncaught:
+SyntaxError: Missing semicolon. (1:15)
+
+> 1 |       "zipcode": "92998-3874",
+    |                ^
+  2 |
+
+emloyerInfo> Uncaught:
+SyntaxError: Missing semicolon. (1:11)
+
+> 1 |       "geo": {
+    |            ^
+  2 |
+
+emloyerInfo> Uncaught:
+SyntaxError: Missing semicolon. (1:13)
+
+> 1 |         "lat": "-37.3159",
+    |              ^
+  2 |
+
+emloyerInfo> Uncaught:
+SyntaxError: Missing semicolon. (1:13)
+
+> 1 |         "lng": "81.1496"
+    |              ^
+  2 |
+
+emloyerInfo> Uncaught:
+SyntaxError: Unexpected token (1:6)
+
+> 1 |       }
+    |       ^
+  2 |
+
+emloyerInfo> Uncaught:
+SyntaxError: Unexpected token (1:4)
+
+> 1 |     },
+    |     ^
+  2 |
+
+emloyerInfo> Uncaught:
+SyntaxError: Missing semicolon. (1:11)
+
+> 1 |     "phone": "1-770-736-8031 x56442",
+    |            ^
+  2 |
+
+emloyerInfo> Uncaught:
+SyntaxError: Missing semicolon. (1:13)
+
+> 1 |     "website": "hildegard.org",
+    |              ^
+  2 |
+
+emloyerInfo> Uncaught:
+SyntaxError: Missing semicolon. (1:13)
+
+> 1 |     "company": {
+    |              ^
+  2 |
+
+emloyerInfo> Uncaught:
+SyntaxError: Missing semicolon. (1:12)
+
+> 1 |       "name": "Romaguera-Crona",
+    |             ^
+  2 |
+
+emloyerInfo> Uncaught:
+SyntaxError: Missing semicolon. (1:19)
+
+> 1 |       "catchPhrase": "Multi-layered client-server neural-net",
+    |                    ^
+  2 |
+
+emloyerInfo> Uncaught:
+SyntaxError: Missing semicolon. (1:10)
+
+> 1 |       "bs": "harness real-time e-markets"
+    |           ^
+  2 |
+
+emloyerInfo> Uncaught:
+SyntaxError: Unexpected token (1:4)
+
+> 1 |     }
+    |     ^
+  2 |
+
+emloyerInfo> db.users.insertOne({"name":"muskan:})
+Uncaught:
+SyntaxError: Unexpected token (1:2)
+
+> 1 |   },db.users.insertOne(){})"name":"muskan:})
+    |   ^
+  2 |
+
+emloyerInfo> db.users.insertOne({id:2,name:"muskan"})
+{
+  acknowledged: true,
+  insertedId: ObjectId("62a03986df1b6ba2493953d9")
+}
+emloyerInfo> db.users.find()
+[
+  { _id: ObjectId("62a03986df1b6ba2493953d9"), id: 2, name: 'muskan' }
+]
+emloyerInfo> db.users.insertMany([{id:1,name:"ritik"},{id:3,name:"aakash"}])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("62a039cfdf1b6ba2493953da"),
+    '1': ObjectId("62a039cfdf1b6ba2493953db")
+  }
+}
+emloyerInfo> db.users.find()
+[
+  { _id: ObjectId("62a03986df1b6ba2493953d9"), id: 2, name: 'muskan' },
+  { _id: ObjectId("62a039cfdf1b6ba2493953da"), id: 1, name: 'ritik' },
+  { _id: ObjectId("62a039cfdf1b6ba2493953db"), id: 3, name: 'aakash' }
+]
+emloyerInfo> db.users.updateOne({id:1},{$set:{name:"Ritik"}})
+Uncaught:
+SyntaxError: Unexpected character ':20)
+
+> 1 | db.users.updateOne(){}id:1},{$set:{name:"Ritik"}})
+    |                     ^
+  2 |
+
+emloyerInfo> db.users.updateOne({id:1},{$set:{name:"Ritik"}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+emloyerInfo> db.users.find().pretty()
+[
+  { _id: ObjectId("62a03986df1b6ba2493953d9"), id: 2, name: 'muskan' },
+  { _id: ObjectId("62a039cfdf1b6ba2493953da"), id: 1, name: 'Ritik' },
+  { _id: ObjectId("62a039cfdf1b6ba2493953db"), id: 3, name: 'aakash' }
+]
+emloyerInfo> db.users.delete({id:2
+Uncaught:
+SyntaxError: Unexpected character ':17)
+
+> 1 | db.users.delete(){}id:2
+    |                  ^
+  2 |
+
+emloyerInfo> db.users.delete({id;1})
+Uncaught:
+SyntaxError: Unexpected token, expected "," (1:19)
+
+> 1 | db.users.delete({id;1})
+    |                    ^
+  2 |
+
+emloyerInfo> db.users.delete({id:1})
+TypeError: db.users.delete is not a function
+emloyerInfo>  db.users.deleteOned:1})
+Uncaught:
+SyntaxError: Unexpected character ':24)
+
+> 1 |  db.users.delete({id:1})One
+    |                         ^
+  2 |
+
+emloyerInfo> db.users.deleteOne({id:2})
+{ acknowledged: true, deletedCount: 1 }
+emloyerInfo> db.users.find()
+[
+  { _id: ObjectId("62a039cfdf1b6ba2493953da"), id: 1, name: 'Ritik' },
+  { _id: ObjectId("62a039cfdf1b6ba2493953db"), id: 3, name: 'aakash' }
+]
+emloyerInf      0 [sig] bash 842! sigpacket::process: Suppressing signal 18 to win32 process (pid 19556)
+
+
+emloyerInfo> db.users.find({id:{$gt:1}})
+[
+  { _id: ObjectId("62a039cfdf1b6ba2493953db"), id: 3, name: 'aakash' }
+]
+emloyerInfo> db.users.find({$or :[{id:1},{id:3}]})
+[
+  { _id: ObjectId("62a039cfdf1b6ba2493953da"), id: 1, name: 'Ritik' },
+  { _id: ObjectId("62a039cfdf1b6ba2493953db"), id: 3, name: 'aakash' }
+]
+emloyerInfo> db.users.updateOne({id:1},{$set:{address:{city:"india",pin:"53627"}}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+emloyerInfo> db.users.find()
+[
+  {
+    _id: ObjectId("62a039cfdf1b6ba2493953da"),
+    id: 1,
+    name: 'Ritik',
+    address: { city: 'india', pin: '53627' }
+  },
+  { _id: ObjectId("62a039cfdf1b6ba2493953db"), id: 3, name: 'aakash' }
+]
+emloyerInfo> db.users.find{address:{city:"india"}})
+Uncaught:
+SyntaxError: Missing semicolon. (1:13)
+
+> 1 | db.users.find{address:{city:"india"}})
+    |              ^
+  2 |
+
+emloyerInfo> db.users.find({address.city="india"})
+Uncaught:
+SyntaxError: Unexpected token, expected "," (1:22)
+
+> 1 | db.users.find({address.city="india"})
+    |                       ^
+  2 |
+
+emloyerInfo> db.users.find({"address.city"="india"})
+Uncaught:
+SyntaxError: Unexpected token (1:29)
+
+> 1 | db.users.find({"address.city"="india"})
+    |                              ^
+  2 |
+
+emloyerInfo> db.users.updateOne({id:1},{skill:["texh","corp"]})
+MongoInvalidArgumentError: Update document requires atomic operators
+emloyerInfo> db.users.find()
+[
+  {
+    _id: ObjectId("62a039cfdf1b6ba2493953da"),
+    id: 1,
+    name: 'Ritik',
+    address: { city: 'india', pin: '53627' }
+  },
+  { _id: ObjectId("62a039cfdf1b6ba2493953db"), id: 3, name: 'aakash' }
+]
+emloyerInfo>

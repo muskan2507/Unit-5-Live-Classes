@@ -7,7 +7,7 @@ const server=http.createServer((req,res)=>{
 // res.end("[1,2,3]")
 if(req.url=="/"){
     // res.end("hello world")
-    fs.readFile("./index.html",{encoding:"utf-8"},(err,data)=>{
+    fs.readFile("./index.html","utf-8",(err,data)=>{
         if(err){
             res.end(err)
             console.log('err occur')
